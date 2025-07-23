@@ -1,11 +1,11 @@
 # Tanie Podróże
 
-Prosta strona w HTML prezentująca sposoby na oszczędne podróżowanie.
+Prezentacja slajdów przygotowana w oparciu o bibliotekę **reveal.js**.
 
 ## Zawartość
-- **index.html** – główna strona serwisu
-- **style.css** – arkusz stylów
-- **script.js** – skrypt JavaScript z prostą obsługą slidera
+- **index.html** – slajdy reveal.js
+- **server.js** – prosty serwer Node.js uruchamiający prezentację
+- **package.json** – definicja projektu Node.js
 
 ## Uruchomienie
-Otwórz `index.html` w przeglądarce.
+Zainstaluj zależności poleceniem `npm install`, a następnie uruchom serwer poprzez `npm start`. Prezentacja będzie dostępna pod adresem `http://localhost:3000`.
