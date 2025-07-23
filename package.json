@@ -1,0 +1,19 @@
+{
+  "name": "tanie-podroze",
+  "version": "1.0.0",
+  "description": "Prezentacja Tanie Podróże z wykorzystaniem reveal.js",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
