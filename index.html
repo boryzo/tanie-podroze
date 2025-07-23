@@ -35,6 +35,29 @@
       font-size: 14px;
       cursor: pointer;
     }
+
+    .tooltip[data-tooltip] {
+      position: relative;
+      cursor: help;
+    }
+
+    .tooltip[data-tooltip]:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 18px;
+      line-height: 1.2;
+      white-space: pre-line;
+      max-width: 320px;
+      text-align: center;
+      z-index: 1000;
+    }
   </style>
 </head>
 <body>
@@ -65,9 +88,22 @@
       <section>
         <h2>🔍 Wyszukiwanie lotów</h2>
         <ul>
-          <li title="Alerty, wersje językowe i OTA (Online Travel Agencies – pośrednicy)">Google Flights, Kayak, Skyscanner, Momondo</li>
-          <li title="XXX - podróżuj dokądkolwiek, kiwi i różne trasy i mixowanie różnych przewoźników">Azair, Kiwi i kreatywne trasy</li>
-          <li>Wyszukiwarki czarterów: biletyczarterowe.r.pl, www.tui.pl/tanie-bilety-lotnicze</li>
+          <li>
+            <a href="https://www.google.com/flights" class="tooltip" data-tooltip="Alerty, wersje językowe i OTA (Online Travel Agencies – pośrednicy)">Google Flights</a>,
+            <a href="https://www.kayak.pl" class="tooltip" data-tooltip="Alerty, wersje językowe i OTA (Online Travel Agencies – pośrednicy)">Kayak</a>,
+            <a href="https://www.skyscanner.pl" class="tooltip" data-tooltip="Alerty, wersje językowe i OTA (Online Travel Agencies – pośrednicy)">Skyscanner</a>,
+            <a href="https://www.momondo.pl" class="tooltip" data-tooltip="Alerty, wersje językowe i OTA (Online Travel Agencies – pośrednicy)">Momondo</a>
+          </li>
+          <li>
+            <a href="https://azair.eu" class="tooltip" data-tooltip="XXX - podróżuj dokądkolwiek, kiwi i różne trasy i mixowanie różnych przewoźników">Azair</a>,
+            <a href="https://www.kiwi.com" class="tooltip" data-tooltip="XXX - podróżuj dokądkolwiek, kiwi i różne trasy i mixowanie różnych przewoźników">Kiwi</a>
+            i kreatywne trasy
+          </li>
+          <li>
+            Wyszukiwarki czarterów:
+            <a href="https://biletyczarterowe.r.pl" class="tooltip" data-tooltip="Wyszukiwarka czarterów">biletyczarterowe.r.pl</a>,
+            <a href="https://www.tui.pl/tanie-bilety-lotnicze" class="tooltip" data-tooltip="Wyszukiwarka czarterów">tui.pl/tanie-bilety-lotnicze</a>
+          </li>
         </ul>
       </section>
 
