@@ -8,18 +8,24 @@
   <!-- Reveal.js core & domyślny motyw jasny -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css" />
   <link id="theme-link" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/white.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
 
   <!-- Highlight.js dla kodu (opcjonalnie) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/monokai.css" />
 
   <style>
+    .reveal {
+      font-family: 'Inter', sans-serif;
+    }
     .reveal h1, .reveal h2 {
       color: #2196f3;
     }
     .theme-toggle {
       position: fixed;
       bottom: 20px;
-      right: 20px;
+      left: 20px;
       z-index: 9999;
       padding: 10px 16px;
       background-color: rgba(0,0,0,0.6);
@@ -59,9 +65,9 @@
       <section>
         <h2>🔍 Wyszukiwanie tanich lotów</h2>
         <ul>
-          <li>Google Flights, Kayak Trips, Skyscanner</li>
-          <li>Alerty cenowe, RSS-y, błędy taryfowe</li>
-          <li>Azair, Kiwi i kreatywne trasy</li>
+          <li title="Alerty, wersje językowe i OTA (Online Travel Agencies – pośrednicy)">Google Flights, Kayak, Skyscanner, Momondo</li>
+          <li title="XXX - podróżuj dokądkolwiek, kiwi i różne trasy i mixowanie różnych przewoźników">Azair, Kiwi i kreatywne trasy</li>
+          <li>Wyszukiwarki lotów czarterowych: biletyczarterowe.r.pl, www.tui.pl/tanie-bilety-lotnicze</li>
         </ul>
       </section>
 
