@@ -1,23 +1,47 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Travel Hacking - Prezentacja</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/sky.css" id="theme">
+
+  <!-- Reveal.js core & domyślny motyw jasny -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css" />
+  <link id="theme-link" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/white.css" />
+
+  <!-- Highlight.js dla kodu (opcjonalnie) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/monokai.css" />
+
+  <style>
+    .reveal h1, .reveal h2 {
+      color: #2196f3;
+    }
+    .theme-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      padding: 10px 16px;
+      background-color: rgba(0,0,0,0.6);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
-      <!-- Slide 1: Title -->
       <section>
-        <h1>Travel Hacking</h1>
+        <h1>🌍 Travel Hacking</h1>
         <h3>Jak podróżować sprytniej, taniej i wygodniej</h3>
+        <p><small>Wersja 0.89 – Kompletna prezentacja</small></p>
       </section>
-      <!-- Slide 2: Agenda overview -->
+
       <section>
-        <h2>🎯 Agenda prezentacji</h2>
+        <h2>🎯 Agenda</h2>
         <ol>
           <li>Wyszukiwanie tanich lotów</li>
           <li>Tanie linie i polityki bagażowe</li>
@@ -31,93 +55,104 @@
           <li>Bonus (opcjonalnie)</li>
         </ol>
       </section>
-      <!-- Slide 3: Wyszukiwanie tanich lotów -->
+
       <section>
         <h2>🔍 Wyszukiwanie tanich lotów</h2>
         <ul>
-          <li>Google Flights, Kayak Trips, Skyscanner – jak z nich korzystać</li>
+          <li>Google Flights, Kayak Trips, Skyscanner</li>
           <li>Alerty cenowe, RSS-y, błędy taryfowe</li>
           <li>Azair, Kiwi i kreatywne trasy</li>
         </ul>
       </section>
-      <!-- Slide 4: Tanie linie i polityki bagażowe -->
+
       <section>
         <h2>💼 Tanie linie i polityki bagażowe</h2>
         <ul>
-          <li>Ryanair vs Wizz Air: co można wnieść, a co kosztuje</li>
-          <li>Sizery i ich rzeczywiste wymiary</li>
-          <li>Programy zniżkowe (Wizz Discount Club itp.)</li>
+          <li>Ryanair vs Wizz Air: zasady bagażowe</li>
+          <li>Sizery – co naprawdę zmierzą</li>
+          <li>Zniżki z Wizz Discount Club</li>
         </ul>
       </section>
-      <!-- Slide 5: Rezerwacja hoteli i apartamentów -->
+
       <section>
-        <h2>🏨 Rezerwacja hoteli i apartamentów</h2>
+        <h2>🏨 Rezerwacja hoteli</h2>
         <ul>
-          <li>Booking.com, Agoda, Trivago, HotelsCombined</li>
-          <li>Programy Genius i lojalnościowe (Accor, IHG)</li>
-          <li>Kiedy warto pisać do hotelu bezpośrednio</li>
+          <li>Booking, Agoda, Trivago</li>
+          <li>Program Genius, lojalnościowe systemy</li>
+          <li>Bezpośredni kontakt z hotelem</li>
         </ul>
       </section>
-      <!-- Slide 6: Wynajem samochodów i ubezpieczenia -->
+
       <section>
-        <h2>🚗 Wynajem samochodów i ubezpieczenia</h2>
+        <h2>🚗 Wynajem aut</h2>
         <ul>
-          <li>Gdzie szukać tanich ofert (Skyscanner, DoYouSpain)</li>
-          <li>Wkład własny i Revolut Metal</li>
-          <li>CDW, karty kredytowe, IDP, zasady w różnych krajach</li>
+          <li>Skyscanner, DoYouSpain</li>
+          <li>Revolut Metal, CDW, wkład własny</li>
+          <li>IDP i przepisy za granicą</li>
         </ul>
       </section>
-      <!-- Slide 7: Internet za granicą -->
+
       <section>
-        <h2>🌐 Internet za granicą – SIM, eSIM, Wi-Fi</h2>
+        <h2>🌐 Internet za granicą</h2>
         <ul>
-          <li>Roam like at home w UE i limity FUP</li>
-          <li>eSIM vs lokalna karta SIM – Airalo, Holafly, Nomad</li>
-          <li>VPN i ochrona danych</li>
+          <li>Roaming UE, eSIM-y, Airalo</li>
+          <li>VPN, darmowe Wi-Fi, bezpieczeństwo</li>
         </ul>
       </section>
-      <!-- Slide 8: Lifehacki lotniskowe -->
+
       <section>
         <h2>✈️ Lifehacki lotniskowe</h2>
         <ul>
-          <li>Co zabrać, czego nie kupować</li>
-          <li>Szybki boarding, Fast Track, dostęp do saloników</li>
-          <li>App in the Air, FlightAware, Wi-Fi tricks</li>
+          <li>Fast Track, butelka na wodę</li>
+          <li>Salony lotniskowe, aplikacje</li>
         </ul>
       </section>
-      <!-- Slide 9: Organizacja i rozliczenia w grupie -->
+
       <section>
-        <h2>🤝 Organizacja i rozliczenia w grupie</h2>
+        <h2>🤝 Organizacja i rozliczenia</h2>
         <ul>
-          <li>Kayak Trips jako organizator podróży</li>
-          <li>Tricount, Spliit – dzielenie kosztów</li>
-          <li>Rome2Rio jako planer transportowy</li>
+          <li>Kayak Trips, Rome2Rio</li>
+          <li>Tricount, Spliit</li>
         </ul>
       </section>
-      <!-- Slide 10: Zaawansowane Travel Hacki -->
+
       <section>
-        <h2>🧠 Zaawansowane Travel Hacki</h2>
+        <h2>🧠 Zaawansowane Hacki</h2>
         <ul>
-          <li>Multi-city, hidden-city, opuszczanie segmentów</li>
-          <li>Skiplagged, ITA Matrix, kombinacje wylotów</li>
-          <li>Błędy cenowe i jak z nich bezpiecznie korzystać</li>
+          <li>Multi-city, hidden-city</li>
+          <li>Skiplagged, ITA Matrix</li>
         </ul>
       </section>
-      <!-- Slide 11: Podsumowanie i Q&A -->
+
       <section>
-        <h2>📌 Podsumowanie i sesja Q&A</h2>
-        <p>Masz pytania? Czas na dyskusję!</p>
-      </section>
-      <!-- Slide 12: Bonus -->
-      <section>
-        <h2>💡 Bonus (opcjonalnie)</h2>
-        <p>Słownik pojęć (CDW, FUP, IDP itd.)</p>
+        <h2>📌 Podsumowanie</h2>
+        <p>Masz pytania? Czas na Q&A!</p>
       </section>
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
+
+  <button class="theme-toggle" onclick="toggleTheme()">🌓 Zmień motyw</button>
+
+  <!-- JS z Reveal i pluginami -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/notes/notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/highlight.js"></script>
   <script>
-    Reveal.initialize();
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      transition: 'slide',
+      plugins: [ RevealNotes, RevealHighlight ]
+    });
+
+    function toggleTheme() {
+      const link = document.getElementById("theme-link");
+      if (link.getAttribute("href").includes("white.css")) {
+        link.setAttribute("href", "https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/black.css");
+      } else {
+        link.setAttribute("href", "https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/white.css");
+      }
+    }
   </script>
 </body>
 </html>
