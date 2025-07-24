@@ -63,13 +63,13 @@
 <body>
   <div class="reveal">
     <div class="slides">
-      <section>
+      <section data-bg-random="images/airport.png,images/airport2.png" data-background-size="cover">
         <h1>🌍 Travel Hacking</h1>
         <h3>Jak podróżować sprytniej, taniej i wygodniej</h3>
         <p><small>Wersja 0.9 – Kompletna prezentacja</small></p>
       </section>
 
-      <section>
+      <section data-background-image="images/agenda.png" data-background-size="cover">
         <h2>🎯 Agenda</h2>
         <ol>
           <li>Wyszukiwanie lotów</li>
@@ -85,7 +85,7 @@
         </ol>
       </section>
 
-      <section>
+      <section data-background-image="images/flights_seach.png" data-background-size="cover">
         <h2>🔍 Wyszukiwanie lotów</h2>
         <ul>
           <li>
@@ -107,7 +107,7 @@
         </ul>
       </section>
 
-      <section>
+      <section data-background-image="images/low_costs.png" data-background-size="cover">
         <h2>💼 Tanie linie - Wizzair, Ryanair, Easyjet</h2>
         <ul>
           <li>Ryanair vs Wizz Air: zasady bagażowe</li>
@@ -115,7 +115,7 @@
         </ul>
       </section>
 
-      <section>
+      <section data-background-image="images/hotels.png" data-background-size="cover">
         <h2>🏨 Rezerwacja hoteli</h2>
         <ul>
           <li>Booking, Agoda, Trivago, HotelCombinated</li>
@@ -124,7 +124,7 @@
         </ul>
       </section>
 
-      <section>
+      <section data-background-image="images/car_rent.png" data-background-size="cover">
         <h2>🚗 Wynajem aut</h2>
         <ul>
           <li>Skyscanner, DoYouSpain</li>
@@ -133,7 +133,7 @@
         </ul>
       </section>
 
-      <section>
+      <section data-background-image="images/esims.png" data-background-size="cover">
         <h2>🌐 Internet za granicą</h2>
         <ul>
           <li>Roaming UE, eSIM-y, Airalo, EsimDB</li>
@@ -141,7 +141,7 @@
         </ul>
       </section>
 
-      <section>
+      <section data-background-image="images/airport2.png" data-background-size="cover">
         <h2>✈️ Lifehacki lotniskowe</h2>
         <ul>
           <li>Fast Track, butelka na wodę</li>
@@ -149,7 +149,7 @@
         </ul>
       </section>
 
-      <section>
+      <section data-bg-random="images/costs.png,images/costs2.png" data-background-size="cover">
         <h2>🤝 Organizacja i rozliczenia</h2>
         <ul>
           <li>Kayak Trips, Rome2Rio</li>
@@ -157,7 +157,7 @@
         </ul>
       </section>
 
-      <section>
+      <section data-background-image="images/low_costs.png" data-background-size="cover">
         <h2>🧠 Proste Hacki</h2>
         <ul>
           <li>Airhint</li>
@@ -166,7 +166,7 @@
         </ul>
       </section>
 
-      <section>
+      <section data-bg-random="images/q_a.png,images/q_a2.png" data-background-size="cover">
         <h2>📌 Podsumowanie</h2>
         <p>Masz pytania? Czas na Q&A!</p>
       </section>
@@ -185,6 +185,12 @@
       slideNumber: true,
       transition: 'slide',
       plugins: [ RevealNotes, RevealHighlight ]
+    });
+
+    document.querySelectorAll('[data-bg-random]').forEach(sec => {
+      const options = sec.getAttribute('data-bg-random').split(',');
+      const choice = options[Math.floor(Math.random() * options.length)].trim();
+      sec.setAttribute('data-background-image', choice);
     });
 
     function toggleTheme() {
