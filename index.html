@@ -58,23 +58,12 @@
       text-align: center;
       z-index: 1000;
     }
-
-    .reveal .slides section[data-background-image]::before,
-    .reveal .slides section[data-bg-random]::before {
-      content: "";
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(255, 255, 255, 0.6);
-      z-index: 1;
-    }
   </style>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
-      <section data-bg-random="images/airport.png,images/airport2.png" data-background-size="cover">
+      <section data-bg-random="images/airport.png,images/airport2.png" data-background-size="cover" data-background-opacity="0.6">
         <h1>🌍 Travel Hacking</h1>
         <h3>Jak podróżować sprytniej, taniej i wygodniej</h3>
         <p><small>Wersja 0.9 – Kompletna prezentacja</small></p>
