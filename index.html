@@ -61,6 +61,21 @@
       text-align: center;
       z-index: 1000;
     }
+
+    table.baggage-table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 900px;
+    }
+    table.baggage-table th,
+    table.baggage-table td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    table.baggage-table th {
+      background-color: #f0f0f0;
+    }
   </style>
 </head>
 <body>
@@ -115,9 +130,43 @@
       <section data-background-image="images/low_costs.png" data-background-size="cover" data-background-opacity="0.3">
         <h2>💼 Tanie linie - Wizzair, Ryanair, Easyjet</h2>
         <ul>
-          <li>Ryanair vs Wizz Air: zasady bagażowe</li>
+          <li><a href="#/bagaz">Porównanie polityk bagażowych</a></li>
           <li>Wizz Discount Club, Ryanair prime</li>
         </ul>
+      </section>
+
+      <section id="bagaz" data-background-image="images/low_costs.png" data-background-size="cover" data-background-opacity="0.3">
+        <h2>📦 Porównanie polityk bagażowych</h2>
+        <table class="baggage-table">
+          <thead>
+            <tr>
+              <th>Linia</th>
+              <th>Darmowy bagaż podręczny</th>
+              <th>Opcjonalna duża torba kabinowa</th>
+              <th>Bagaż rejestrowany</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>easyJet</td>
+              <td>45 × 36 × 20 cm, do 15 kg</td>
+              <td>56 × 45 × 25 cm (za dopłatą lub w taryfie Plus/Flexi)</td>
+              <td>Do 3× (15 kg/23 kg, max 275 cm, max 32 kg), online taniej</td>
+            </tr>
+            <tr>
+              <td>Wizz Air</td>
+              <td>40 × 30 × 20 cm, do 10 kg</td>
+              <td>55 × 40 × 23 cm (Priority ticket)</td>
+              <td>10–32 kg (do 6 sztuk)</td>
+            </tr>
+            <tr>
+              <td>Ryanair</td>
+              <td>40 × 30 × 20 cm (sizer 42 × 20 × 32 cm)</td>
+              <td>55 × 40 × 20 cm (Priority)</td>
+              <td>10 kg lub 20 kg (za dopłatą, max 32 kg)</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
 
       <section data-background-image="images/hotels.png" data-background-size="cover" data-background-opacity="0.3">
