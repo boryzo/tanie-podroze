@@ -44,6 +44,14 @@ let chatHistory = [
   { role: 'user', parts: [{ text: GEMINI_PROMPT }] }
 ];
 
+let isWaiting = false;
+
+function formatMessage(text) {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\n/g, '<br>');
+}
+
 function openChat() {
   const widget = document.getElementById('chatWidget');
   const apiKey = localStorage.getItem('gemini_api_key');
@@ -71,21 +79,26 @@ function saveApiKey() {
 }
 
 async function sendMessage() {
+  if (isWaiting) return;
   const apiKey = localStorage.getItem('gemini_api_key');
   if (!apiKey) {
     openChat();
     return;
   }
   const inputEl = document.getElementById('chatInput');
+  const sendBtn = document.getElementById('sendButton');
   const text = inputEl.value.trim();
   if (!text) return;
   const messagesEl = document.getElementById('chatMessages');
   const userDiv = document.createElement('div');
   userDiv.className = 'message user';
-  userDiv.textContent = text;
+  userDiv.innerHTML = formatMessage(text);
   messagesEl.appendChild(userDiv);
   chatHistory.push({ role: 'user', parts: [{ text }] });
   inputEl.value = '';
+  sendBtn.disabled = true;
+  inputEl.disabled = true;
+  isWaiting = true;
   try {
     const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`, {
       method: 'POST',
@@ -96,7 +109,7 @@ async function sendMessage() {
     const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Brak odpowiedzi';
     const aiDiv = document.createElement('div');
     aiDiv.className = 'message ai';
-    aiDiv.textContent = reply;
+    aiDiv.innerHTML = formatMessage(reply);
     messagesEl.appendChild(aiDiv);
     chatHistory.push({ role: 'model', parts: [{ text: reply }] });
   } catch (e) {
@@ -104,6 +117,17 @@ async function sendMessage() {
     errorDiv.className = 'message ai';
     errorDiv.textContent = 'Wystąpił błąd.';
     messagesEl.appendChild(errorDiv);
+  } finally {
+    sendBtn.disabled = false;
+    inputEl.disabled = false;
+    isWaiting = false;
+    messagesEl.scrollTop = messagesEl.scrollHeight;
   }
-  messagesEl.scrollTop = messagesEl.scrollHeight;
 }
+
+document.getElementById('chatInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    sendMessage();
+  }
+});
