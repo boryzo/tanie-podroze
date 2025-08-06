@@ -47,6 +47,9 @@ let chatHistory = [
 let isWaiting = false;
 
 function formatMessage(text) {
+  if (window.marked) {
+    return marked.parse(text);
+  }
   return text
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
     .replace(/\n/g, '<br>');
@@ -97,7 +100,6 @@ async function sendMessage() {
   chatHistory.push({ role: 'user', parts: [{ text }] });
   inputEl.value = '';
   sendBtn.disabled = true;
-  inputEl.disabled = true;
   isWaiting = true;
   try {
     const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`, {
@@ -119,7 +121,6 @@ async function sendMessage() {
     messagesEl.appendChild(errorDiv);
   } finally {
     sendBtn.disabled = false;
-    inputEl.disabled = false;
     isWaiting = false;
     messagesEl.scrollTop = messagesEl.scrollHeight;
   }
