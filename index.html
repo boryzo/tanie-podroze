@@ -170,16 +170,118 @@
 <body>
   <div class="reveal">
     <div class="slides">
-      <section id="o-mnie">
-        <h2>O mnie</h2>
-        <p>Cześć! Mam na imię <strong>Borys</strong> — tato dwóch córek (7 i 9 lat) oraz mąż wspaniałej żony. Podróżujemy razem tak często, jak tylko się da.</p>
-        <p>W powietrzu pokonałem już <strong>640 070 km</strong>. Z żoną odwiedziliśmy <strong>5 kontynentów</strong>, a z córkami razem byliśmy na <strong>3 kontynentach</strong>: Europie, Azji i Afryce. Australia jest w planach!</p>
-        <p>Najbardziej ukochana destynacja? <strong>Hiszpania</strong>, a w szczególności <strong>Andaluzja</strong> — za klimat, historię i kuchnię.</p>
-        <p>Zawodowo jestem pasjonatem <strong>DevOps</strong> — lubię planować, optymalizować i automatyzować procesy. Prywatnie kocham bycie w drodze, czas z rodziną, dobre jedzenie i wino. Jestem też fanem <strong>kuchni azjatyckiej</strong>… nawet na redukcji.</p>
-        <p>Moje statystyki lotów sprawdzisz tutaj: 
-          <a href="https://openflights.org/user/boryzo" target="_blank" rel="noopener">openflights.org/user/boryzo</a>
-        </p>
-      </section>
+<!-- KROK 1: podstawy -->
+<section data-auto-animate>
+  <h2 data-id="code-title" data-auto-animate-target>About: Borys()</h2>
+
+  <pre class="code-wrapper" data-id="code-animation" data-auto-animate-target>
+    <code class="hljs language-javascript" data-trim data-line-numbers>
+/**
+ * O mnie — w formie obiektu :)
+ */
+const Borys = {
+  name: "Borys",
+  roles: ["DevOps", "tata", "mąż"],
+
+  family: {
+    daughters: 2,
+    ages: [7, 9],
+  },
+};
+export default Borys;
+    </code>
+  </pre>
+
+  <p style="font-size:0.85em; opacity:.8;">
+    Syntax highlighting: <a href="https://highlightjs.org/usage/" target="_blank" rel="noopener">highlight.js</a>
+  </p>
+</section>
+
+<!-- KROK 2: podróże z rodziną -->
+<section data-auto-animate>
+  <h2 data-id="code-title" data-auto-animate-target>About: Borys()</h2>
+
+  <pre class="code-wrapper" data-id="code-animation" data-auto-animate-target>
+    <code class="hljs language-javascript" data-trim data-line-numbers>
+/**
+ * O mnie — w formie obiektu :)
+ */
+const Borys = {
+  name: "Borys",
+  roles: ["DevOps", "tata", "mąż"],
+
+  family: {
+    daughters: 2,
+    ages: [7, 9],
+  },
+
+  travel: {
+    continents: {
+      withWife: 5,
+      withDaughters: 3,
+      togetherList: ["Europa", "Azja", "Afryka"],
+    }
+  },
+};
+export default Borys;
+    </code>
+  </pre>
+
+  <p style="font-size:0.85em; opacity:.8;">
+    <em>Auto-animate</em> dopisuje nowy blok <code>travel</code>.
+  </p>
+</section>
+
+<!-- KROK 3: statystyki, ulubione, plany -->
+  <section data-auto-animate>
+    <h2 data-id="code-title" data-auto-animate-target>About: Borys()</h2>
+  
+    <pre class="code-wrapper" data-id="code-animation" data-auto-animate-target>
+      <code class="hljs language-javascript" data-trim data-line-numbers>
+  /**
+   * O mnie — w formie obiektu :)
+   */
+  const Borys = {
+    name: "Brow
+    roles: ["DevOps", "tata", "mąż"],
+  
+    family: {
+      daughters: 2,
+      ages: [7, 9],
+    },
+  
+    travel: {
+      continents: {
+        withWife: 5,
+        withDaughters: 3,
+        togetherList: ["Europa", "Azja", "Afryka"],
+      },
+      flownKm: 640_070,
+      favorites: {
+        country: "Hiszpania",
+        region: "Andaluzja",
+      },
+      nextUp: ["Australia"],
+      openFlights: "https://openflights.org/user/boryzo",
+    },
+  
+    vibe: [
+      "planowanie podróży",
+      "bycie w drodze",
+      "czas z rodziną",
+      "jedzenie i wino",
+      "kuchnia azjatycka (na redukcji)",
+    ],
+  };
+  export default Borys;
+      </code>
+    </pre>
+  
+    <p style="font-size:0.85em; opacity:.8;">
+      Dodane: kilometry, ulubione miejsca i link do OpenFlights.
+    </p>
+  </section>
+
       <section data-bg-random="images/airport.png,images/airport2.png" data-background-size="cover" data-background-opacity="0.3">
         <h1>🌍 Travel Hacking</h1>
         <h3>Jak podróżować sprytniej, taniej i wygodniej</h3>
