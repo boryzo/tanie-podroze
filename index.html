@@ -14,7 +14,6 @@
 
   <!-- Highlight.js dla kodu (opcjonalnie) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/monokai.css" />
-
   <style>
     .reveal {
       font-family: 'Inter', sans-serif;
@@ -170,45 +169,50 @@
 <body>
   <div class="reveal">
     <div class="slides">
-      <section data-auto-animate>
-        <h2 data-id="Omnie" data-auto-animate-target>About: Borys()</h2>
-        <pre class="code-wrapper" data-id="code-animation" data-auto-animate-target>
-          <code class="hljs language-javascript" data-trim data-line-numbers>
-            const Borys = {
-              name: "Borys",
-              roles: ["tata", "mąż", "DevOps"],
-            
-              family: {
-                daughters: 2,
-                ages: [7, 9],
-              },
-            
-              travel: {
-                continents: {
-                  withWife: 5,
-                  withDaughters: 3,
-                  togetherList: ["Europa", "Azja", "Afryka"],
-                },
-                flownKm: "640070",
-                favorites: {
-                  country: "Hiszpania",
-                  region: "Andaluzja",
-                },
-                nextUp: ["Australia"],
-                openFlights: "https://openflights.org/user/boryzo",
-              },
-            
-              vibe: [
-                "planowanie podróży",
-                "bycie w drodze",
-                "czas z rodziną",
-                "jedzenie i wino",
-                "kuchnia azjatycka (na redukcji)",
-              ],
-            };
-            export default Borys;
+      <section data-auto-animate data-bg-random="images/airport.png,images/airport2.png" data-background-size="cover" data-background-opacity="0.3">
+        <h2 data-id="Omnie" data-auto-animate-target>O autorze</h2>
+        <pre>
+          <code data-line-numbers="1-4|5-11|13-18|19-25|26-28|30-37" data-trim class="language-json">
+        const Borys = {
+          name: "Borys",
+          roles: ["tata", "mąż", "DevOps"],
+
+          family: {
+            wife: { name: "Wiola" },
+            daughters: [
+              { name: "Pola", age: 9 },
+              { name: "Nina", age: 7 }
+            ]
+          },
+
+          travel: {
+            continents: {
+              withWife: 5,
+              withDaughters: 3,
+              togetherList: ["Europa", "Azja", "Afryka"],
+            },
+            flownKm: 640070,
+            total_flights: 390,
+            countries: 59,
+            favorites: {
+              country: "Hiszpania",
+              region: "Andaluzja",
+            },
+            nextUp: ["Islandia", "La Palma", "Malezja", "Wietnam", "Hongkong", "Madera", "..."],
+            openFlights: "https://openflights.org/user/boryzo",
+          },
+
+          vibe: [
+            "czas z rodziną",
+            "planowanie podróży",
+            "IT",
+            "jedzenie i wino",
+            "SUP"
+          ],
+        };
           </code>
         </pre>
+
       </section>
       <section data-bg-random="images/airport.png,images/airport2.png" data-background-size="cover" data-background-opacity="0.3">
         <h1>🌍 Travel Hacking</h1>
@@ -422,10 +426,6 @@
     }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="dist/plugin/highlight/highlight.js"></script>
-  <script>
-    Reveal.initialize({ plugins: [ RevealHighlight ] });
-  </script>
   <script src="gemini.js"></script>
 </body>
 </html>
