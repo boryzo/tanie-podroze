@@ -170,33 +170,6 @@
 <body>
   <div class="reveal">
     <div class="slides">
-<!-- KROK 1: podstawy -->
-<section data-auto-animate>
-  <h2 data-id="code-title" data-auto-animate-target>About: Borys()</h2>
-
-  <pre class="code-wrapper" data-id="code-animation" data-auto-animate-target>
-    <code class="hljs language-javascript" data-trim data-line-numbers>
-/**
- * O mnie — w formie obiektu :)
- */
-const Borys = {
-  name: "Borys",
-  roles: ["DevOps", "tata", "mąż"],
-
-  family: {
-    daughters: 2,
-    ages: [7, 9],
-  },
-};
-export default Borys;
-    </code>
-  </pre>
-
-  <p style="font-size:0.85em; opacity:.8;">
-    Syntax highlighting: <a href="https://highlightjs.org/usage/" target="_blank" rel="noopener">highlight.js</a>
-  </p>
-</section>
-
 <!-- KROK 2: podróże z rodziną -->
 <section data-auto-animate>
   <h2 data-id="code-title" data-auto-animate-target>About: Borys()</h2>
@@ -494,6 +467,10 @@ export default Borys;
     }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="dist/plugin/highlight/highlight.js"></script>
+  <script>
+    Reveal.initialize({ plugins: [ RevealHighlight ] });
+  </script>
   <script src="gemini.js"></script>
 </body>
 </html>
