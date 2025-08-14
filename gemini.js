@@ -8,6 +8,8 @@ Pepper.pl (promocje podróżnicze)
 
 forum Wakacje.pl
 
+loter.pl
+
 grupy FB o tanim podróżowaniu
 
 SecretFlying, HolidayPirates
